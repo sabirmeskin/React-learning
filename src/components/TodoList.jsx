@@ -6,10 +6,10 @@ export default function TodoList(props) {
 
   return (
  <div className=" ">
-     <ul className=" px-4 w-full " >
+     <ul className=" px-4 mx-9" >
       {todos.map((todo , todoIndex ) => {
         return (
-          <TodoCard key={todoIndex}> 
+          <TodoCard index = {todoIndex} {...props} key={todoIndex}> 
               <span>{todo}</span>
           </TodoCard>
         )
